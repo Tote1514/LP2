@@ -1,6 +1,6 @@
 # Meu primeiro Repositório
 ## Repositório para a Disciplina de Linguagem de Programação II
-*Olá, tudo bem?*
+*Olá, tudo bem?* :wave:
 
 Meu nome é José Antonio Castro Marroquín e sou estudante do Curso de Ciências da Computação na UERJ. Atualmente estou cursando meu terceiro semestre. Esotu animado para comenzar esse repositorio que vai focar na Programação Orientada a Objetos por meio da linguagem Java. 
 
