@@ -8,9 +8,9 @@ public class Ellipse {
     private int x, y;
     private int w, h;
     //Cor de contorno
-    int r1, g1, b1;
+    private int r1, g1, b1;
     //Cor de fundo
-    int r2, g2, b2;
+    private int r2, g2, b2;
 
 
     public Ellipse (int x, int y, int w, int h,int r1, int g1, int b1, int r2, int g2, int b2) {

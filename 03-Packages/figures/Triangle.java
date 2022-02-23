@@ -9,9 +9,9 @@ public class Triangle{
     //Coordenadas y's
     private int[] y = new int[3];
     //Cor de contorno
-    int r1, g1, b1;
+    private int r1, g1, b1;
     //Cor de fundo
-    int r2, g2, b2;
+    private int r2, g2, b2;
 
     public Triangle(int x1, int x2, int x3, int y1, int y2, int y3,int r1, int g1, int b1, int r2, int g2, int b2){
         this.x[0] = x1;
