@@ -2,13 +2,13 @@ package figures;
 
 import java.awt.*;
 
-public class Rect {
-    private int x, y;
-    private int w, h;
+public class Rect extends Figures{
+    int x, y;
+    int w, h;
     //Cor de contorno
-    private int r1, g1, b1;
+    int r1, g1, b1;
     //Cor de fundo
-    private int r2, g2, b2;
+    int r2, g2, b2;
 
     public Rect (int x, int y, int w, int h,int r1, int g1, int b1, int r2, int g2, int b2) {
         this.x = x;
