@@ -5,27 +5,14 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
 
 public class Ellipse extends Figures{
-
     int x, y;
     int w, h;
-    //Cor de contorno
-    int r1, g1, b1;
-    //Cor de fundo
-    int r2, g2, b2;
-
-
     public Ellipse (int x, int y, int w, int h,int r1, int g1, int b1, int r2, int g2, int b2) {
+        super(r1, g1, b1, r2, g2, b2);
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        this.r1 = r1;
-        this.g1 = g1;
-        this.b1 = b1;
-        this.g2 = g2;
-        this.r2 = r2;
-        this.b2 = b2;
-
     }
 
     public void print () {
