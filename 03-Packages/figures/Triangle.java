@@ -39,7 +39,16 @@ public class Triangle extends Figures{
     public boolean contains(int x, int y){
         return x<=super.x+50 && x>=super.x-50 && y>=super.y && y<=super.y+50;
     }
-
+    public void changeColor(int r, int g, int b){
+        super.r1 = r;
+        super.g1 = g;
+        super.b1 = b;
+    }
+    public void changeBackGroundColor(int r, int g, int b){
+        this.r2 = r;
+        this.g2 = g;
+        this.b2 = b;
+    }
     public void paint(Graphics g){
         Graphics g2d =(Graphics2D) g;
         g2d.setColor(new Color(super.r1, super.g1, super.b1));

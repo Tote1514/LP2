@@ -26,9 +26,16 @@ public class Line extends Figures{
         this.y2 += y;
     }
     public boolean contains(int x, int y){
-        return x>= super.x && x<= this.x2 && y == super.y;
+        return x>= super.x && x<= this.x2 && y >= super.y-2 && y <= super.y+2;
     }
-
+    public void changeColor(int r, int g, int b){
+        super.r1 = r;
+        super.g1 = g;
+        super.b1 = b1;
+    }
+    public void changeBackGroundColor(int r, int g, int b){
+        //Não faz nada.
+    }
     public void paint(Graphics g) {
         Graphics g2d =(Graphics2D) g;
         g2d.setColor(new Color(super.r1, super.g1, super.b1));

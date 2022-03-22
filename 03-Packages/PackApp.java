@@ -20,16 +20,14 @@ class PackApp {
 class ListFrame extends JFrame{
 
     ArrayList<Figures> figs = new ArrayList<Figures>();
+	//JButton button;
 	int cont = 0; // Numero de figuras na lista
-	boolean selection = false;
-
-	Figures focus = null;// Por enquanto, vai armazenar a última figura
-	int lastest_x;
-	int lastest_y;
-	Random random = new Random();
-    final int COLOR = 256;//Parametro para passar de argumento para gerar uma cor aleatoria
-
+	boolean selection = false;// Indica se a figura em foco foi selecionada ou é seria a última figura da lista
+	Figures focus = null;//Armanzena a figura em foco
+	int lastest_x;//A coordenada x da última vez que foi apertado o mouse
+	int lastest_y;// A coordenada y da última vez que foi apertado o mouse
     ListFrame () {
+
         this.addWindowListener (
             new WindowAdapter() {
                 public void windowClosing (WindowEvent e) {
@@ -44,12 +42,12 @@ class ListFrame extends JFrame{
                     int y = lastest_y;
                     int w = 50;
                     int h = 50;
-                    int r1 = random.nextInt(COLOR);
-                    int g1 = random.nextInt(COLOR);
-                    int b1 = random.nextInt(COLOR);
-                    int r2 = random.nextInt(COLOR);
-                    int g2 = random.nextInt(COLOR);
-                    int b2 = random.nextInt(COLOR);
+                    int r1 = 0;
+                    int g1 = 0;
+                    int b1 = 0;
+                    int r2 = 255;
+                    int g2 = 255;
+                    int b2 = 255;
                     switch (evt.getKeyChar()) {
                         case 'e':
                             figs.add(new Ellipse(x,y, w,h,r1,g1,b1,r2,g2,b2));
@@ -91,16 +89,67 @@ class ListFrame extends JFrame{
 								cont--;
 								break;
 							case 37:
-								focus.addX(-1);
+								focus.addX(-2);
 								break;
 							case 38:
-								focus.addY(-1);
+								focus.addY(-2);
 								break;
 							case 39:
-								focus.addX(1);
+								focus.addX(2);
 								break;
 							case 40:
-								focus.addY(1);
+								focus.addY(2);
+								break;
+							case 48:
+								focus.changeColor(255,0,0);
+								break;
+							case 49:
+								focus.changeColor(0,255,0);
+								break;
+							case 50:
+								focus.changeColor(255,255,0);
+								break;
+							case 51:
+								focus.changeColor(0,0,255);
+								break;
+							case 52:
+								focus.changeColor(76,0,153);
+								break;
+							case 53:
+								focus.changeColor(255,0,127);
+								break;
+							case 54:
+								focus.changeColor(96,96,96);
+								break;
+							case 55:
+								focus.changeColor(51,255,255);
+								break;
+							case 56:
+								focus.changeColor(0,0,0);
+								break;
+							case 57:
+								focus.changeColor(255,255,255);
+								break;
+							case 90:
+								focus.changeBackGroundColor(0,255,0);
+								break;
+							case 88:
+								focus.changeBackGroundColor(255,255,0);
+								break;
+							case 67:
+								focus.changeBackGroundColor(0,0,255);
+								break;
+							case 86:
+								focus.changeBackGroundColor(76,0,153);
+								break;
+							case 66:
+								focus.changeBackGroundColor(255,0,127);
+								break;
+							case 78:
+								focus.changeBackGroundColor(96,96,96);
+								break;
+							case 77:
+								focus.changeBackGroundColor(51,255,255);
 								break;
 						}
 
@@ -109,6 +158,21 @@ class ListFrame extends JFrame{
                 }
             }
         );
+		this.addMouseMotionListener(
+			new MouseMotionAdapter() {
+				public void mouseDragged(MouseEvent evt){
+					int dx = evt.getX() - lastest_x;
+					int dy = evt.getY() - lastest_y;
+					if (focus.contains(lastest_x,lastest_y)) {
+						focus.addX(dx);
+						focus.addY(dy);
+						lastest_x += dx;
+						lastest_y += dy;
+					}
+					repaint();
+				}
+			}
+		);
         this.addMouseListener(
 			new MouseAdapter(){
 				public void mousePressed(MouseEvent evt){
@@ -116,20 +180,38 @@ class ListFrame extends JFrame{
 					lastest_x = evt.getX();
 					lastest_y = evt.getY();
 
-					for (Figures fig : figs) {
+					for (int i = figs.size()-1; i>=0 ;i--) {
+						Figures  fig = figs.get(i);
 						if (fig.contains(lastest_x,lastest_y)) {
 							focus = fig;
 							selection = true;
-							focus.print();
-							Collections.swap(figs,figs.indexOf(focus),figs.size()-1);
+							figs.remove(focus);
+							figs.add(focus);
+							break;
 						}
 					}
 				}
 
 			}
 		);
+		/*button = new JButton("Pick a color");
+		button.setBounds(0,0,100,50);
+		button.addActionListener(
+			new ActionListener() {
+     			public void actionPerformed(ActionEvent evt) {
+					if(evt.getSource()==button) {
+						JColorChooser colorChooser = new JColorChooser();
+
+						Color color = JColorChooser.showDialog(null, "Pick a color", Color.black);
+
+					}
+     			}
+			}
+		);
+		this.add(button);*/
         this.setTitle("Projeto");
         this.setSize(600, 600);
+		this.setLayout(null);
 
     }
 

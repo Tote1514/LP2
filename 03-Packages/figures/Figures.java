@@ -14,6 +14,8 @@ public abstract class Figures {
         this.g1 = g1;
         this.b1 = b1;
     }
+    public abstract void changeColor(int r, int g, int b);
+    public abstract void changeBackGroundColor(int r, int g, int b);
     public abstract void print();
     public abstract void addX(float x);
     public abstract void addY(float y);
