@@ -1,5 +1,5 @@
 package figures;
-import java.awt.Graphics;
+import java.awt.*;
 
 public abstract class Figures {
     //Primeira coordenada
@@ -14,8 +14,8 @@ public abstract class Figures {
         this.g1 = g1;
         this.b1 = b1;
     }
-    public abstract void changeColor(int r, int g, int b);
-    public abstract void changeBackGroundColor(int r, int g, int b);
+    public abstract void changeColor(Color new_color);
+    public abstract void changeBackGroundColor(Color new_color);
     public abstract void print();
     public abstract void addX(float x);
     public abstract void addY(float y);

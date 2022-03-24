@@ -4,13 +4,10 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.awt.geom.*;
-
-
 
 import figures.*;
 
-class PackApp {
+class ProjetoApp {
     public static void main (String[] args) {
         ListFrame frame = new ListFrame();
         frame.setVisible(true);
@@ -20,7 +17,8 @@ class PackApp {
 class ListFrame extends JFrame{
 
     ArrayList<Figures> figs = new ArrayList<Figures>();
-	//JButton button;
+	Rect redButton = new Rect(10,35,125,30,0,0,0,131,111,255);
+	Rect blueButton = new Rect(10,65,125,30,0,0,0,65,105,225);
 	int cont = 0; // Numero de figuras na lista
 	boolean selection = false;// Indica se a figura em foco foi selecionada ou é seria a última figura da lista
 	Figures focus = null;//Armanzena a figura em foco
@@ -48,34 +46,37 @@ class ListFrame extends JFrame{
                     int r2 = 255;
                     int g2 = 255;
                     int b2 = 255;
-                    switch (evt.getKeyChar()) {
-                        case 'e':
-                            figs.add(new Ellipse(x,y, w,h,r1,g1,b1,r2,g2,b2));
+					if (!(redButton.contains(lastest_x,lastest_y) && !blueButton.contains(lastest_x,lastest_y))) {
+						switch (evt.getKeyChar()) {
+							case 'e':
+							figs.add(new Ellipse(x,y, w,h,r1,g1,b1,r2,g2,b2));
 							cont++;
 							selection = false;
-                            break;
-                        case 'r':
-                            figs.add(new Rect(x,y, w,h,r1,g1,b1,r2,g2,b2));
+							break;
+							case 'r':
+							figs.add(new Rect(x,y, w,h,r1,g1,b1,r2,g2,b2));
 							cont++;
 							selection = false;
-                            break;
-                        case 't':
-                            int x2 = x + 50;
-                            int y2 = y + 50;
-                            int x3 = x - 50;
-                            int y3=  y + 50;
-                            figs.add(new Triangle(x,x2,x3,y,y2,y3,r1,g1,b1, r2, b2, g2));
+							break;
+							case 't':
+							int x2 = x + 50;
+							int y2 = y + 50;
+							int x3 = x - 50;
+							int y3=  y + 50;
+							figs.add(new Triangle(x,x2,x3,y,y2,y3,r1,g1,b1, r2, b2, g2));
 							cont++;
 							selection = false;
-                            break;
-                        case 'w':
-                            int x_2 = x + 75;
-                            int y_2 = y;
-                            figs.add(new Line(x, y, x_2, y_2, r1, g1, b1));
+							break;
+							case 'w':
+							int x_2 = x + 75;
+							int y_2 = y;
+							figs.add(new Line(x, y, x_2, y_2, r1, g1, b1));
 							cont++;
 							selection = false;
-                            break;
-                    }
+							break;
+						}
+
+					}
 
 					if (cont >0 &&!selection) {
 						focus = figs.get(cont-1);
@@ -99,57 +100,6 @@ class ListFrame extends JFrame{
 								break;
 							case 40:
 								focus.addY(2);
-								break;
-							case 48:
-								focus.changeColor(255,0,0);
-								break;
-							case 49:
-								focus.changeColor(0,255,0);
-								break;
-							case 50:
-								focus.changeColor(255,255,0);
-								break;
-							case 51:
-								focus.changeColor(0,0,255);
-								break;
-							case 52:
-								focus.changeColor(76,0,153);
-								break;
-							case 53:
-								focus.changeColor(255,0,127);
-								break;
-							case 54:
-								focus.changeColor(96,96,96);
-								break;
-							case 55:
-								focus.changeColor(51,255,255);
-								break;
-							case 56:
-								focus.changeColor(0,0,0);
-								break;
-							case 57:
-								focus.changeColor(255,255,255);
-								break;
-							case 90:
-								focus.changeBackGroundColor(0,255,0);
-								break;
-							case 88:
-								focus.changeBackGroundColor(255,255,0);
-								break;
-							case 67:
-								focus.changeBackGroundColor(0,0,255);
-								break;
-							case 86:
-								focus.changeBackGroundColor(76,0,153);
-								break;
-							case 66:
-								focus.changeBackGroundColor(255,0,127);
-								break;
-							case 78:
-								focus.changeBackGroundColor(96,96,96);
-								break;
-							case 77:
-								focus.changeBackGroundColor(51,255,255);
 								break;
 						}
 
@@ -190,33 +140,37 @@ class ListFrame extends JFrame{
 							break;
 						}
 					}
+					if(redButton.contains(lastest_x,lastest_y) && focus != null && cont > 0) {
+						JColorChooser colorChooser = new JColorChooser();
+
+						Color color = JColorChooser.showDialog(null, "Escolha a cor do contoro", Color.black);
+						focus.changeColor(color);
+					}
+					if (blueButton.contains(lastest_x,lastest_y) && focus != null && cont > 0) {
+						JColorChooser colorChooser = new JColorChooser();
+
+						Color color = JColorChooser.showDialog(null, "Escolha a cor do fundo:", Color.black);
+						focus.changeBackGroundColor(color);
+					}
+					repaint();
 				}
 
 			}
 		);
-		/*button = new JButton("Pick a color");
-		button.setBounds(0,0,100,50);
-		button.addActionListener(
-			new ActionListener() {
-     			public void actionPerformed(ActionEvent evt) {
-					if(evt.getSource()==button) {
-						JColorChooser colorChooser = new JColorChooser();
-
-						Color color = JColorChooser.showDialog(null, "Pick a color", Color.black);
-
-					}
-     			}
-			}
-		);
-		this.add(button);*/
         this.setTitle("Projeto");
         this.setSize(600, 600);
-		this.setLayout(null);
 
     }
 
     public void paint (Graphics g) {
         super.paint(g);
+		redButton.paint(g);
+		g.setColor(Color.black);
+		g.setFont(new Font("Ink Free",Font.BOLD,12));
+		g.drawString("COR DE CONTORNO",12,45);
+		blueButton.paint(g);
+		g.setColor(Color.black);
+		g.drawString("COR DE FUNDO", 17,78);
         for (Figures f : this.figs) {
             f.paint(g);
         }
