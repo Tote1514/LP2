@@ -36,6 +36,18 @@ public class Line extends Figures{
     public void changeBackGroundColor(Color new_color){
         //Não faz nada.
     }
+    public boolean pontosY(int x, int y){
+        return false;
+    }
+    public void addHeight(float dy){
+        //Não faz nada
+    }
+    public boolean pontosX (int x, int y){
+        return (x <= super.x+4 && x >= super.x && y <= super.y +2 && y >= super.y-2);
+    }
+    public void addWidth(float dx){
+        super.x += dx;
+    }
     public void paint(Graphics g) {
         Graphics g2d =(Graphics2D) g;
         g2d.setColor(contorno);

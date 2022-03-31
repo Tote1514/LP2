@@ -41,6 +41,24 @@ public class Rect extends Figures{
     public void changeBackGroundColor(Color new_color){
         fundo = new_color;
     }
+    public boolean pontosY(int x, int y){
+        if (x <= super.x +4 && x>= super.x && y <= (super.y + h) && y >=(super.y + h -4)) {
+            return true;
+        }else if (x >= (super.x + w -4) && x <= (super.x + w) && y <= (super.y + h) && y >=(super.y + h -4)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public void addHeight(float dy){
+        this.h += dy;
+    }
+    public boolean pontosX (int x, int y){
+        return x <= (super.x + w) && x>= (super.x + w -4) && y <= (super.y + 4) && y >=(super.y);
+    }
+    public void addWidth(float dx){
+        this.w += dx;
+    }
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(contorno);

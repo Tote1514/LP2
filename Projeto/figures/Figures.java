@@ -14,6 +14,10 @@ public abstract class Figures {
         this.g1 = g1;
         this.b1 = b1;
     }
+    public abstract boolean pontosY(int x, int y);
+    public abstract boolean pontosX(int x, int y);
+    public abstract void addWidth(float dx);
+    public abstract void addHeight(float dy);
     public abstract void changeColor(Color new_color);
     public abstract void changeBackGroundColor(Color new_color);
     public abstract void print();

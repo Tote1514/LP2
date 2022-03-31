@@ -20,7 +20,7 @@ class ListFrame extends JFrame{
 	Rect redButton = new Rect(10,35,125,30,0,0,0,131,111,255);
 	Rect blueButton = new Rect(10,65,125,30,0,0,0,65,105,225);
 	int cont = 0; // Numero de figuras na lista
-	boolean selection = false;// Indica se a figura em foco foi selecionada ou é seria a última figura da lista
+	boolean selection = false;// Indica se a figura em foco foi selecionada ou é a última figura da lista
 	Figures focus = null;//Armanzena a figura em foco
 	int lastest_x;//A coordenada x da última vez que foi apertado o mouse
 	int lastest_y;// A coordenada y da última vez que foi apertado o mouse
@@ -46,7 +46,7 @@ class ListFrame extends JFrame{
                     int r2 = 255;
                     int g2 = 255;
                     int b2 = 255;
-					if (!(redButton.contains(lastest_x,lastest_y) && !blueButton.contains(lastest_x,lastest_y))) {
+					if (!redButton.contains(lastest_x,lastest_y) && !blueButton.contains(lastest_x,lastest_y) && x>0) {
 						switch (evt.getKeyChar()) {
 							case 'e':
 							figs.add(new Ellipse(x,y, w,h,r1,g1,b1,r2,g2,b2));
@@ -67,7 +67,7 @@ class ListFrame extends JFrame{
 							cont++;
 							selection = false;
 							break;
-							case 'w':
+							case 'l':
 							int x_2 = x + 75;
 							int y_2 = y;
 							figs.add(new Line(x, y, x_2, y_2, r1, g1, b1));
@@ -114,10 +114,19 @@ class ListFrame extends JFrame{
 					int dx = evt.getX() - lastest_x;
 					int dy = evt.getY() - lastest_y;
 					if (focus.contains(lastest_x,lastest_y)) {
-						focus.addX(dx);
-						focus.addY(dy);
-						lastest_x += dx;
-						lastest_y += dy;
+						if (focus.pontosY(lastest_x,lastest_y)) {
+							focus.addHeight(dy);
+							lastest_y += dy;
+						}else if (focus.pontosX(lastest_x,lastest_y)) {
+							focus.addWidth(dx);
+							lastest_x += dx;
+						}else {
+							focus.addX(dx);
+							focus.addY(dy);
+							lastest_x += dx;
+							lastest_y += dy;
+						}
+
 					}
 					repaint();
 				}

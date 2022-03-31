@@ -42,6 +42,18 @@ public class Ellipse extends Figures{
     public void changeBackGroundColor(Color new_color){
         fundo = new_color;
     }
+    public boolean pontosY(int x, int y){
+        return x <= (super.x + (w/2) +5) && x >= (super.x + (w/2) -5) && y <= (super.y + h) && y >= (super.y + h -10);
+    }
+    public void addHeight(float dy){
+        this.h += dy;
+    }
+    public boolean pontosX (int x, int y){
+        return x<= (super.x + w) && x >=(super.x + w -8) && y <=(super.y + (h/2) +5) && y >= (super.y +(h/2) -5);
+    }
+    public void addWidth(float dx){
+        this.w += dx;
+    }
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(contorno);

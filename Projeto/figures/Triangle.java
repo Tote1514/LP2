@@ -41,13 +41,26 @@ public class Triangle extends Figures{
         this.y3 += y;
     }
     public boolean contains(int x, int y){
-        return x<=super.x+50 && x>=super.x-50 && y>=super.y && y<=super.y+50;
+        return x<=super.x+(this.x2-super.x) && x>=super.x-(super.x-this.x3) && y>=super.y && y<=super.y+(this.y2 - super.y);
     }
     public void changeColor(Color new_color){
         contorno = new_color;
     }
     public void changeBackGroundColor(Color new_color){
         fundo = new_color;
+    }
+    public boolean pontosY(int x, int y){
+        return x <= super.x +2 && x >= super.x-2 && y >= super.y -2 && y <= super.y +2;
+    }
+    public void addHeight(float dy){
+        super.y += dy;
+    }
+    public boolean pontosX (int x, int y){
+        return x <= this.x2 && x >= this.x2-4 && y >= this.y2 -4 && y <= this.y2;
+    }
+    public void addWidth(float dx){
+        this.x3 -= dx;
+        this.x2 += dx;
     }
     public void paint(Graphics g){
         Graphics g2d =(Graphics2D) g;
