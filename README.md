@@ -22,6 +22,6 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 * **Linha:** Clique na extremidade esquerda da linha e arraste o mouse o tamaho que você quer aumentar o diminuir na figura.
 * **Rectângulo:** 
-    -Clique nos vertices inferiores e arreste o mouse verticalmente se deseja mudar a altura do rectângulo.
+    - Clique nos vertices inferiores e arreste o mouse verticalmente se deseja mudar a altura do rectângulo.
 
 
