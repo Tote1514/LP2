@@ -9,7 +9,7 @@
 
 **Para remover figuras aperte a tecla de delete.**
 
-### Para mexer as figuras:
+### Para mexer as figuras: :point_left::point_up_2::point_down::point_right:
 
 O usuário deve clicar na figura que deseja mover e depois o usuário tem a opção de mover arrastando com o mouse ou clicando as setas do teclado.
 
