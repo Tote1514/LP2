@@ -1,4 +1,4 @@
-## Manual de instruções:wave:
+## Manual de instruções:vulcan_salute:
 ### Comandos:
 ### Para criar figuras aperte as seguintes teclas: :art:
 * **Criação de elipse:** e
