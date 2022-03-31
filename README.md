@@ -1,6 +1,6 @@
 ## Manual de instruções
 ### Comandos:
-###Para criar figuras aperte as seguintes teclas
+### Para criar figuras aperte as seguintes teclas
 * **Criação de circulo:** e
 * **Criação de rectângulo:** r
 * **Criação de triângulo:** t
