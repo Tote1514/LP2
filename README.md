@@ -1,6 +1,6 @@
 ## Manual de instruções:wave:
 ### Comandos:
-### Para criar figuras aperte as seguintes teclas:
+### Para criar figuras aperte as seguintes teclas: :art:
 * **Criação de elipse:** e
 * **Criação de rectângulo:** r
 * **Criação de triângulo:** t
