@@ -1,4 +1,4 @@
-## Manual de instruções
+## Manual de instruções:wave
 ### Comandos:
 ### Para criar figuras aperte as seguintes teclas:
 * **Criação de elipse:** e
