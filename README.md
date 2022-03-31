@@ -18,7 +18,7 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 * **Mudar a cor de fundo:** Clique na figura que deseja mudar a cor e depois aperte o botão de Cor de fundo e selecione a cor que deseja colocar.
 * **Mudar a cor de contorno:** Clique na figura que deseja mudar a cor e depois aperte o botão de Cor de contorno e selecione a cor que deseja colocar.
 
-### Para mudar o tamanho da figura:
+### Para mudar o tamanho da figura: :pinching_hand:
 
 * **Linha:** Clique na extremidade esquerda da linha e arraste o mouse horizontalmente.
 * **Rectângulo:** 
