@@ -28,8 +28,8 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
     - Clique no vertice superior e arraste o mouse verticalmente se deseja mudar a altura do triângulo.
     - Clique no vertice inferior direito e arreste horizontalmente se deseja mudar a largura do triângulo.
 * **Elipse:**
-    - Clique na metade da parte inferior da elipse e arraste verticalmente se deseja mudar a altura da elipse.
-    - Clique na metade do lado direito da elipse e arraste horizontalmente se deseja mudar a largura da elipse.
+    - Clique no meio da parte inferior da elipse e arraste verticalmente se deseja mudar a altura da elipse.
+    - Clique na meio do lado direito da elipse e arraste horizontalmente se deseja mudar a largura da elipse.
 
 
 
