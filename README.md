@@ -1,7 +1,7 @@
 ## Manual de instruções
 ### Comandos:
 ### Para criar figuras aperte as seguintes teclas:
-* **Criação de circulo:** e
+* **Criação de elipse:** e
 * **Criação de rectângulo:** r
 * **Criação de triângulo:** t
 * **Criação de linha:** l
@@ -20,8 +20,16 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 ### Para mudar o tamanho da figura:
 
-* **Linha:** Clique na extremidade esquerda da linha e arraste o mouse o tamaho que você quer aumentar o diminuir na figura.
+* **Linha:** Clique na extremidade esquerda da linha e arraste o mouse horizontalmente.
 * **Rectângulo:** 
-    - Clique nos vertices inferiores e arreste o mouse verticalmente se deseja mudar a altura do rectângulo.
+    - Clique nos vertices inferiores e arraste o mouse verticalmente se deseja mudar a altura do rectângulo.
+    - Clique no vertice superior direito e arraste o mouse horizontalmente se deseja mudar a largura do retângulo.
+* **Triângulo:**
+    - Clique no vertice superior e arraste o mouse verticalmente se deseja mudar a altura do triângulo.
+    - Clique no vertice inferior direito e arreste horizontalmente se deseja mudar a largura do triângulo.
+* **Elipse:**
+    - Clique na metade da parte inferior da elipse e arraste verticalmente se deseja mudar a altura da elipse.
+    - Clique na metade do lado direito da elipse e arraste horizontalmente se deseja mudar a largura da elipse.
+
 
 
