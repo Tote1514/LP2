@@ -7,7 +7,9 @@
 * **Criação de linha:** l
 
 
-**Para remover figuras aperte a tecla de delete.**
+**Para remover figuras aperte a figura que deseja remover e aperte a tecla de delete.**
+
+A figura será criada no lugar do último clik do mouse.
 
 ### Para mexer as figuras: :point_left::point_up_2::point_down::point_right:
 
