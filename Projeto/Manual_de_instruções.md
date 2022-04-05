@@ -7,7 +7,7 @@
 * **Criação de linha:** l
 
 
-**Para remover figuras aperte a figura que deseja remover e aperte a tecla de delete.**
+**Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
 A figura será criada no lugar do último clik do mouse.
 
