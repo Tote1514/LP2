@@ -7,7 +7,7 @@
 * **Criação de linha:** l
 
 
-**A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.
+**A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.**
 
 **Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
