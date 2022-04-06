@@ -7,6 +7,8 @@
 * **Criação de linha:** l
 
 
+**A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.
+
 **Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
 A figura será criada no lugar do último clik do mouse.
@@ -15,6 +17,11 @@ A figura será criada no lugar do último clik do mouse.
 
 O usuário deve clicar na figura que deseja mover e depois o usuário tem a opção de mover arrastando com o mouse ou clicando as setas do teclado.
 
+### Para mudar a figura em foco:
+
+* O usuário pode clicar na figura que deseja colcocar em foco.
+* O usuário pode apertar a tecla 'enter' para mudar a figura em foco.
+
 ### Para mudar o cor das figuras: :rainbow:
 
 * **Mudar a cor de fundo:** Clique na figura que deseja mudar a cor e depois aperte o botão de Cor de fundo e selecione a cor que deseja colocar.
@@ -22,13 +29,7 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 ### Para mudar o tamanho da figura: :pinching_hand:
 
-* **Linha:** Clique na extremidade esquerda da linha e arraste o mouse horizontalmente.
-* **Rectângulo:**
-    - Clique nos vertices inferiores e arraste o mouse verticalmente se deseja mudar a altura do rectângulo.
-    - Clique no vertice superior direito e arraste o mouse horizontalmente se deseja mudar a largura do retângulo.
-* **Triângulo:**
-    - Clique no vertice superior e arraste o mouse verticalmente se deseja mudar a altura do triângulo.
-    - Clique no vertice inferior direito e arreste horizontalmente se deseja mudar a largura do triângulo.
-* **Elipse:**
-    - Clique no meio da parte inferior da elipse e arraste verticalmente se deseja mudar a altura da elipse.
-    - Clique na meio do lado direito da elipse e arraste horizontalmente se deseja mudar a largura da elipse.
+* **Linha:** Clique na extremidade direita da linha e arraste o mouse horizontalmente.
+* **Rectângulo:** Clique no vértice inferior direito e arraste o mouse para mudar o tamanho do retângulo.
+* **Triângulo:** Clique no vértice inferior direito e arraste o mouse para mudar o tamanho do triângulo.
+* **Elipse:** Clique no vértice inferior direito do retângulo vermelho e arreste o mouse para mudar o foco.
