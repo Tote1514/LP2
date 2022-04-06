@@ -20,7 +20,7 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 ### Para mudar a figura em foco:
 
 * O usuário pode clicar na figura que deseja colcocar em foco.
-* O usuário pode apertar a tecla 'enter' para mudar a figura em foco.
+* O usuário pode apertar a tecla 'space' para mudar a figura em foco.
 
 ### Para mudar o cor das figuras: :rainbow:
 
