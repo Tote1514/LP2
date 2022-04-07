@@ -11,7 +11,7 @@
 
 **Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
-A figura será criada no última posição do mouse.
+A figura será criada na última posição do mouse.
 
 ### Para mexer as figuras: :point_left::point_up_2::point_down::point_right:
 
@@ -29,4 +29,4 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 ### Para mudar o tamanho da figura: :pinching_hand:
 
-Para mudar o tamanho de uma figura é necessário clicar no circulo vermelho e arrastar o mouse.
+Para mudar o tamanho de uma figura é necessário clicar no circulo vermelho que fica no lado direito inferior da figura e arrastar o mouse.
