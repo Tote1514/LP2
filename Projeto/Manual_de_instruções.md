@@ -11,7 +11,7 @@
 
 **Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
-A figura será criada no lugar onde se encontrar o mouse.
+A figura será criada no última posição do mouse.
 
 ### Para mexer as figuras: :point_left::point_up_2::point_down::point_right:
 
