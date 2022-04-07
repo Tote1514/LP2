@@ -3,16 +3,13 @@ package figures;
 import java.awt.*;
 
 public class Rect extends Figures{
-    int w, h;
     //Cor de fundo
     int r2, g2, b2;
     Color contorno;
     Color fundo;
 
     public Rect (int x, int y, int w, int h,int r1, int g1, int b1, int r2, int g2, int b2) {
-        super(x, y, r1, g1, b1);
-        this.w = w;
-        this.h = h;
+        super(x, y, w, h, r1, g1, b1);
         this.r2 = r2;
         this.g2 = g2;
         this.b2 = b2;
@@ -22,7 +19,7 @@ public class Rect extends Figures{
 
     public void print () {
         System.out.format("Retangulo de tamanho (%d,%d) na posicao (%d,%d).\n",
-            this.w, this.h, super.x, super.y);
+            super.w, super.h, super.x, super.y);
     }
 
     public void addX(float x) {
@@ -33,7 +30,7 @@ public class Rect extends Figures{
         super.y += y;
     }
     public boolean contains(int x, int y){
-        return x<=super.x+this.w && x>=super.x && y>=super.y && y<=super.y+this.h;
+        return x<=super.x+super.w && x>=super.x && y>=super.y && y<=super.y+super.h;
     }
     public void changeColor(Color new_color){
         contorno = new_color;
@@ -41,30 +38,21 @@ public class Rect extends Figures{
     public void changeBackGroundColor(Color new_color){
         fundo = new_color;
     }
-    public boolean pontosY(int x, int y){
-        if (x <= super.x +4 && x>= super.x && y <= (super.y + h) && y >=(super.y + h -4)) {
-            return true;
-        }else if (x >= (super.x + w -4) && x <= (super.x + w) && y <= (super.y + h) && y >=(super.y + h -4)) {
-            return true;
-        }else {
-            return false;
-        }
+    public boolean pontos(int x, int y){
+        return x >= (super.x + super.w) && x <= (super.x + super.w + 10) && y <= (super.y + super.h+10) && y >=(super.y + super.h);
     }
     public void addHeight(float dy){
-        this.h += dy;
-    }
-    public boolean pontosX (int x, int y){
-        return x <= (super.x + w) && x>= (super.x + w -4) && y <= (super.y + 4) && y >=(super.y);
+        super.h += dy;
     }
     public void addWidth(float dx){
-        this.w += dx;
+        super.w += dx;
     }
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(contorno);
         g2d.setStroke(new BasicStroke(2));
-        g2d.drawRect(super.x,super.y, this.w,this.h);
+        g2d.drawRect(super.x,super.y, super.w,super.h);
         g2d.setColor(fundo);
-        g2d.fillRect(super.x,super.y, this.w,this.h);
+        g2d.fillRect(super.x,super.y, super.w,super.h);
     }
 }

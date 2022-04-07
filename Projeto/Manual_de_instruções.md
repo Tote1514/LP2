@@ -29,7 +29,4 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 ### Para mudar o tamanho da figura: :pinching_hand:
 
-* **Linha:** Clique na extremidade direita da linha e arraste o mouse horizontalmente.
-* **Rectângulo:** Clique no vértice inferior direito e arraste o mouse para mudar o tamanho do retângulo.
-* **Triângulo:** Clique no vértice inferior direito e arraste o mouse para mudar o tamanho do triângulo.
-* **Elipse:** Clique no vértice inferior direito do retângulo vermelho e arreste o mouse para mudar o foco.
+Para mudar o tamanho de uma figura é necessário clicar no circulo vermelho e arrastar o mouse.
