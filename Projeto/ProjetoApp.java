@@ -125,26 +125,28 @@ class ListFrame extends JFrame{
 				public void mouseDragged(MouseEvent evt){
 					int dx = evt.getX() - lastest_x;
 					int dy = evt.getY() - lastest_y;
-					if (focus.pontos(lastest_x,lastest_y)) {
-						if (focus instanceof Line) {
-							focus.addWidth(dx);
-							lastest_x += dx;
-						}else{
-							focus.addWidth(dx);
-							focus.addHeight(dy);
-							lastest_y += dy;
-							lastest_x += dx;
+					if (focus != null) {
+						if (focus.pontos(lastest_x,lastest_y)) {
+							if (focus instanceof Line) {
+								focus.addWidth(dx);
+								lastest_x += dx;
+							}else{
+								focus.addWidth(dx);
+								focus.addHeight(dy);
+								lastest_y += dy;
+								lastest_x += dx;
+							}
 						}
-					}
-					if (focus.contains(lastest_x,lastest_y)) {
-						focus.addX(dx);
-						focus.addY(dy);
-						lastest_x += dx;
-						lastest_y += dy;
+						if (focus.contains(lastest_x,lastest_y)) {
+							focus.addX(dx);
+							focus.addY(dy);
+							lastest_x += dx;
+							lastest_y += dy;
 
+						}
+						repaint();
 					}
 
-					repaint();
 				}
 			}
 		);
