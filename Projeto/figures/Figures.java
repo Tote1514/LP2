@@ -1,7 +1,8 @@
 package figures;
 import java.awt.*;
+import ivisible.IVisible;
 
-public abstract class Figures {
+public abstract class Figures implements IVisible {
     //Primeira coordenada
     public int x, y;
     public int w, h;
@@ -25,6 +26,4 @@ public abstract class Figures {
     public abstract void print();
     public abstract void addX(float x);
     public abstract void addY(float y);
-    public abstract void paint (Graphics g);
-    public abstract boolean contains(int x, int y);
 }

@@ -44,7 +44,7 @@ public class Triangle extends Figures{
         this.y2 += y;
         this.y3 += y;
     }
-    public boolean contains(int x, int y){
+    public boolean clicked(int x, int y){
         return x<=this.x1+(this.x2-this.x1) && x>=this.x1-(this.x1-this.x3) && y>=this.y1 && y<=this.y1+(this.y2 - this.y1);
     }
     public void changeColor(Color new_color){

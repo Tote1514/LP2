@@ -31,7 +31,7 @@ public class Line extends Figures{
         this.y1 += y;
         this.y2 += y;
     }
-    public boolean contains(int x, int y){
+    public boolean clicked(int x, int y){
         return x>= this.x1 && x<= this.x2 && y >= this.y1-2 && y <= this.y1+2;
     }
     public void changeColor(Color new_color){

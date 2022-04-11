@@ -48,7 +48,7 @@ class ListFrame extends JFrame{
                     int r2 = 255;
                     int g2 = 255;
                     int b2 = 255;
-					if (!redButton.contains(x,y) && !blueButton.contains(x,y) && x>0) {
+					if (!redButton.clicked(x,y) && !blueButton.clicked(x,y) && x>0) {
 						switch (evt.getKeyChar()) {
 							case 'e':
 							figs.add(new Ellipse(x,y, w,h,r1,g1,b1,r2,g2,b2));
@@ -137,7 +137,7 @@ class ListFrame extends JFrame{
 								lastest_x += dx;
 							}
 						}
-						if (focus.contains(lastest_x,lastest_y)) {
+						if (focus.clicked(lastest_x,lastest_y)) {
 							focus.addX(dx);
 							focus.addY(dy);
 							lastest_x += dx;
@@ -159,7 +159,7 @@ class ListFrame extends JFrame{
 					for (int j = figs.size()-1; j>=0 ;j--) {
 						Figures  fig = figs.get(j);
 						if (focus != null) {
-							if (fig.contains(lastest_x,lastest_y) && !(focus.pontos(lastest_x,lastest_y))) {
+							if (fig.clicked(lastest_x,lastest_y) && !(focus.pontos(lastest_x,lastest_y))) {
 								focus = fig;
 								selection = true;
 								figs.remove(focus);
@@ -168,7 +168,7 @@ class ListFrame extends JFrame{
 								break;
 							}
 						}else {
-							if (fig.contains(lastest_x,lastest_y)) {
+							if (fig.clicked(lastest_x,lastest_y)) {
 								focus = fig;
 								selection = true;
 								figs.remove(focus);
@@ -179,13 +179,13 @@ class ListFrame extends JFrame{
 						}
 
 					}
-					if(redButton.contains(lastest_x,lastest_y) && focus != null && cont > 0) {
+					if(redButton.clicked(lastest_x,lastest_y) && focus != null && cont > 0) {
 						JColorChooser colorChooser = new JColorChooser();
 
 						Color color = JColorChooser.showDialog(null, "Escolha a cor do contoro", Color.black);
 						focus.changeColor(color);
 					}
-					if (blueButton.contains(lastest_x,lastest_y) && focus != null && cont > 0) {
+					if (blueButton.clicked(lastest_x,lastest_y) && focus != null && cont > 0) {
 						JColorChooser colorChooser = new JColorChooser();
 
 						Color color = JColorChooser.showDialog(null, "Escolha a cor do fundo:", Color.black);

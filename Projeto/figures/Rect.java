@@ -29,7 +29,7 @@ public class Rect extends Figures{
     public void addY(float y) {
         super.y += y;
     }
-    public boolean contains(int x, int y){
+    public boolean clicked(int x, int y){
         return x<=super.x+super.w && x>=super.x && y>=super.y && y<=super.y+super.h;
     }
     public void changeColor(Color new_color){
