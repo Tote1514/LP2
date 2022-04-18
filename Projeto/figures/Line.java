@@ -5,8 +5,8 @@ import javax.swing.*;
 
 public class Line extends Figures{
 
-    Color contorno;
-    int x2, y2, x1, y1;
+    private Color contorno;
+    private int x2, y2, x1, y1;
 
     public Line(int x1, int y1, int x2, int y2,int r1, int g1, int b1){
         super(x1-1, y1-4, 76, 8, r1, g1, b1);

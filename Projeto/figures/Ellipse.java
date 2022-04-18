@@ -6,9 +6,9 @@ import java.awt.geom.Ellipse2D.Double;
 
 public class Ellipse extends Figures{
     //Cor de fundo
-    int r2, g2, b2;
-    Color contorno;
-    Color fundo;
+    private int r2, g2, b2;
+    private Color contorno;
+    private Color fundo;
 
     public Ellipse (int x, int y, int w, int h,int r1, int g1, int b1, int r2, int g2, int b2) {
         super(x, y, w, h, r1, g1, b1);

@@ -5,13 +5,13 @@ import javax.swing.*;
 
 public class Triangle extends Figures{
     //Coordenadas x's
-    int x1, x2, x3;
+    private int x1, x2, x3;
     //Coordenadas y's
-    int y1, y2, y3;
+    private int y1, y2, y3;
     //Cor de fundo
-    int r2, g2, b2;
-    Color contorno;
-    Color fundo;
+    private int r2, g2, b2;
+    private Color contorno;
+    private Color fundo;
 
     public Triangle(int x1, int x2, int x3, int y1, int y2, int y3,int r1, int g1, int b1, int r2, int g2, int b2){
         super(x1-50, y1, 100, 50, r1, g1, b1);
