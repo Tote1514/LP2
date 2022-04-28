@@ -24,3 +24,7 @@ ProjetoApp.class
 IVisible.class
 a.exe
 rect.o
+App.class
+ArrayStack.class
+LinkedStack.class
+IStackable.class
