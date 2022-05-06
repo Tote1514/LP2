@@ -89,7 +89,7 @@ public class Triangle extends Figures{
             super.x = this.x1;
         }
     }
-    public void paint(Graphics g){
+    public void paint(Graphics g, boolean focused){
         Graphics g2d =(Graphics2D) g;
         g2d.setColor(contorno);
         Polygon poly = new Polygon();
@@ -99,5 +99,10 @@ public class Triangle extends Figures{
         g2d.drawPolygon(poly);
         g2d.setColor(fundo);
         g2d.fillPolygon(poly);
+        if (focused) {
+            g.setColor(Color.red);
+            g.drawRect(super.x, super.y, super.w, super.h);
+            g.drawOval((super.x+super.w), (super.y+super.h),10,10);
+        }
     }
 }

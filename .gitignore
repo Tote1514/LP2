@@ -28,3 +28,5 @@ App.class
 ArrayStack.class
 LinkedStack.class
 IStackable.class
+proj.bin
+Button.class

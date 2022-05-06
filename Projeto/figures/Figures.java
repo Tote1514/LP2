@@ -1,8 +1,9 @@
 package figures;
 import java.awt.*;
+import java.io.Serializable;
 import ivisible.IVisible;
 
-public abstract class Figures implements IVisible {
+public abstract class Figures implements IVisible, Serializable {
     //Primeira coordenada
     public int x, y;
     public int w, h;

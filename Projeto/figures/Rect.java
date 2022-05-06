@@ -47,12 +47,17 @@ public class Rect extends Figures{
     public void addWidth(float dx){
         super.w += dx;
     }
-    public void paint (Graphics g) {
+    public void paint (Graphics g, boolean focused) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(contorno);
         g2d.setStroke(new BasicStroke(2));
         g2d.drawRect(super.x,super.y, super.w,super.h);
         g2d.setColor(fundo);
         g2d.fillRect(super.x,super.y, super.w,super.h);
+        if (focused) {
+            g.setColor(Color.red);
+            g.drawRect(super.x, super.y, super.w, super.h);
+            g.drawOval((super.x+super.w), (super.y+super.h),10,10);
+        }
     }
 }

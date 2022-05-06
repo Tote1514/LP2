@@ -59,9 +59,14 @@ public class Line extends Figures{
         }
 
     }
-    public void paint(Graphics g) {
+    public void paint(Graphics g, boolean focused) {
         Graphics g2d =(Graphics2D) g;
         g2d.setColor(contorno);
         g2d.drawLine(this.x1, this.y1, this.x2, this.y2);
+        if (focused) {
+            g.setColor(Color.red);
+            g.drawRect(super.x, super.y, super.w, super.h);
+            g.drawOval((super.x+super.w), (super.y+super.h),10,10);
+        }
     }
 }
