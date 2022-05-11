@@ -37,10 +37,11 @@ class ListFrame extends JFrame{
 		}catch (Exception x) {
 			System.out.println("Error!");
 		}
-		buts.add(new Button(0));
-		buts.add(new Button(1));
-		buts.add(new Button(2));
-		buts.add(new Button(3));
+		buts.add(new Button(0, new Ellipse(25,90,30,30,0,0,0,255,255,255)));
+		buts.add(new Button(1, new Rect(25,130,30,30,0,0,0,255,255,255)));
+		buts.add(new Button(2, new Triangle(40,55,25,170,200,200,0,0,0,255,255,255)));
+		buts.add(new Button(3, new Line(25,225,55,225,0,0,0)));
+		buts.add(new Button(4, new Rect(25,250,30,30,255,0,0,255,99,71)));
 
         this.addWindowListener (
             new WindowAdapter() {
@@ -214,10 +215,25 @@ class ListFrame extends JFrame{
 					}
 					for (Button but : buts) {
 						if (but.clicked(lastest_x,lastest_y)) {
-							focus_but = but;
-							touched = true;
+							if (focus_but == but) {
+								focus_but = null;
+								break;
+							}else {
+								focus_but = but;
+								touched = true;
+								break;
+							}
 						}
-
+					}
+					if (focus != null) {
+						if (focus_but != null) {
+							if (focus_but.idx == 4) {
+								figs.remove(focus);
+								focus = null;
+								i = 0;
+								focus_but = null;
+							}
+						}
 					}
 					if (focus_but != null && !touched &&!redButton.clicked(lastest_x,lastest_y) && !blueButton.clicked(lastest_x,lastest_y)) {
 						switch (focus_but.idx) {
@@ -272,7 +288,7 @@ class ListFrame extends JFrame{
     }
 
     public void paint (Graphics g) {
-        super.paint(g);
+		super.paint(g);
 		for (Button but :this.buts) {
 			but.paint(g, but==focus_but);
 		}
@@ -283,6 +299,8 @@ class ListFrame extends JFrame{
 		blueButton.paint(g, false);
 		g.setColor(Color.black);
 		g.drawString("FUNDO", 17,70);
+		g.setFont(new Font("Serif",Font.PLAIN, 20));
+		g.drawString("X",32,272);
 		for (Figures f : this.figs) {
 			f.paint(g, f == focus);
 		}
