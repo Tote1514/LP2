@@ -1,17 +1,25 @@
 ## Manual de instruções:vulcan_salute:
 ### Comandos:
-### Para criar figuras aperte as seguintes teclas: :art:
+### Para criar figuras com o teclado: :art:
 * **Criação de elipse:** e
 * **Criação de rectângulo:** r
 * **Criação de triângulo:** t
 * **Criação de linha:** l
-
-
-**A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.**
-
-**Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
+* **Para remover figuras aperte a figura que deseja remover e aperte a tecla de backspace.**
 
 A figura será criada na última posição do mouse.
+
+### Para criar figuras com o menu:
+
+![Captura de Tela (58)](https://user-images.githubusercontent.com/98971493/169118029-f8b1a6b5-8604-4362-8c87-45154306d7ad.png)
+
+* **Criação de elipse:** Apertar o botão com o desenho da elipse.
+* **Criação de retângulo:** Apertar o botão com o desenho do retângulo.
+* **Criação de triângulo:** Apertar o botão com o desenho do triângulo.
+* **Criação de linha:** Apertar o botão com o desenho da linha
+* **Para remover figuras aperte a figura e depois aperte o botão com o desenho de um retângulo com um  "X"**
+
+**A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.**
 
 ### Para mexer as figuras: :point_left::point_up_2::point_down::point_right:
 
@@ -24,8 +32,8 @@ O usuário deve clicar na figura que deseja mover e depois o usuário tem a opç
 
 ### Para mudar o cor das figuras: :rainbow:
 
-* **Mudar a cor de fundo:** Clique na figura que deseja mudar a cor e depois aperte o botão de Cor de fundo e selecione a cor que deseja colocar.
-* **Mudar a cor de contorno:** Clique na figura que deseja mudar a cor e depois aperte o botão de Cor de contorno e selecione a cor que deseja colocar.
+* **Mudar a cor de fundo:** Clique na figura que deseja mudar a cor e depois aperte o botão de "fundo" e selecione a cor que deseja colocar.
+* **Mudar a cor de contorno:** Clique na figura que deseja mudar a cor e depois aperte o botão de "contorno" e selecione a cor que deseja colocar.
 
 ### Para mudar o tamanho da figura: :pinching_hand:
 
