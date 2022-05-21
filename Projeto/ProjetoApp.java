@@ -122,15 +122,17 @@ class ListFrame extends JFrame{
 							case 40:
 								focus.addY(2);
 								break;
-							case 32:
-								if (figs.size() > 0) {
-									focus = figs.get(i);
-									i++;
-								}
-								if (i >= figs.size()) {
-									i = 0;
-								}
-								break;
+						}
+						if (evt.getKeyCode() == KeyEvent.VK_TAB) {
+							if (figs.size() > 0) {
+								focus = figs.get(i);
+								figs.remove(focus);
+								figs.add(focus);
+								i++;
+							}
+							if (i >= figs.size()) {
+								i = 0;
+							}
 						}
 
 					}
@@ -192,27 +194,34 @@ class ListFrame extends JFrame{
 								figs.remove(focus);
 								figs.add(focus);
 								i = 0;
-								touched = true;
+								//touched = true;
 								break;
 							}
 						}else {
 							if (fig.clicked(lastest_x,lastest_y)) {
-								focus = fig;
-								selection = true;
-								figs.remove(focus);
-								figs.add(focus);
-								i = 0;
-								touched = true;
-								break;
+								if (focus_but != null && focus_but.idx ==4) {
+									figs.remove(fig);
+									i = 0;
+									focus_but = null;
+									break;
+								}else{
+									focus = fig;
+									selection = true;
+									figs.remove(focus);
+									figs.add(focus);
+									i = 0;
+									//touched = true;
+									break;
+								}
 							}
 						}
 
 					}
-					if (focus != null) {
+					/*if (focus != null) {
 						if (focus.pontos(lastest_x,lastest_y)) {
 							touched = true;
 						}
-					}
+					}*/
 					for (Button but : buts) {
 						if (but.clicked(lastest_x,lastest_y)) {
 							if (focus_but == but) {
@@ -220,12 +229,13 @@ class ListFrame extends JFrame{
 								break;
 							}else {
 								focus_but = but;
+								focus = null;
 								touched = true;
 								break;
 							}
 						}
 					}
-					if (focus != null) {
+					/*if (focus != null) {
 						if (focus_but != null) {
 							if (focus_but.idx == 4) {
 								figs.remove(focus);
@@ -234,18 +244,20 @@ class ListFrame extends JFrame{
 								focus_but = null;
 							}
 						}
-					}
+					}*/
 					if (focus_but != null && !touched &&!redButton.clicked(lastest_x,lastest_y) && !blueButton.clicked(lastest_x,lastest_y)) {
 						switch (focus_but.idx) {
 							case 0:
 								figs.add(new Ellipse(lastest_x,lastest_y, w,h,r1,g1,b1,r2,g2,b2));
 								selection = false;
 								focus = figs.get(figs.size()-1);
+                                focus_but = null;
 								break;
 							case 1:
 								figs.add(new Rect(lastest_x,lastest_y, w,h,r1,g1,b1,r2,g2,b2));
 								selection = false;
 								focus = figs.get(figs.size()-1);
+								focus_but = null;
 								break;
 							case 2:
 								int x2 = lastest_x + 50;
@@ -255,6 +267,7 @@ class ListFrame extends JFrame{
 								figs.add(new Triangle(lastest_x,x2,x3,lastest_y,y2,y3,r1,g1,b1, r2, b2, g2));
 								selection = false;
 								focus = figs.get(figs.size()-1);
+								focus_but = null;
 								break;
 							case 3:
 								int x_2 = lastest_x + 75;
@@ -262,6 +275,7 @@ class ListFrame extends JFrame{
 								figs.add(new Line(lastest_x, lastest_y, x_2, y_2, r1, g1, b1));
 								selection = false;
 								focus = figs.get(figs.size()-1);
+								focus_but = null;
 								break;
 						}
 					}

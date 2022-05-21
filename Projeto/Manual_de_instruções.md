@@ -17,7 +17,7 @@ A figura será criada na última posição do mouse.
 * **Criação de retângulo:** Apertar o botão com o desenho do retângulo.
 * **Criação de triângulo:** Apertar o botão com o desenho do triângulo.
 * **Criação de linha:** Apertar o botão com o desenho da linha
-* **Para remover figuras aperte a figura e depois aperte o botão com o desenho de um retângulo com um  "X"**
+* **Para remover figuras aperte o botão com o desenho de um retângulo com um "X" e depois clique na figura que deseja eliminar.**
 
 **A figura em foco vai ser indicada por um retângulo vermelho que vai ficar ao redor da figura.**
 
